@@ -14,12 +14,11 @@ models:
      - name: minimum_nights
        data_tests:
          - positive_values
-
-  - name:dim_hosts_cleansed   
+  - name: dim_hosts_cleansed
     config:
       contract:
         enforced: true
-    columns
+    columns:
       - name: host_id
         data_type: integer
       - name: host_name
