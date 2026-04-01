@@ -1,5 +1,5 @@
 models:
-  - name: dim_listings_cleansed
+  - name: dim_list_cleansed
     columns:
      - name: host_id
        data_tests:
