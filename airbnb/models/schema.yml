@@ -18,7 +18,7 @@ models:
     config:
       contract:
         enforced: true
-    columns:
+    columns
       - name: host_id
         data_type: integer
       - name: host_name
