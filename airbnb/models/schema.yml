@@ -24,8 +24,8 @@ models:
       - name: room_type
         tests:
           - accepted_values:
-              field: room_type
-              values: ['Entire home/apt','Private room','Shared room','Hotel room']
+              arguments:
+                values: ['Entire home/apt','Private room','Shared room','Hotel room']
 
       - name: minimum_nights
         tests:
