@@ -1,7 +1,12 @@
 version: 2
 
 models:
-  - name: dim_list_cleansed
+  - name: dim_list_cleansed    
+    description: Cleansed table which contains Airbnb listings.
+    data_tests:
+      - minimum_row_count:
+          arguments:
+            min_row_count: 1000
     columns:
       - name: listing_id
         tests:
