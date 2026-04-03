@@ -1,8 +1,8 @@
-{% macro no_empty_strings(model) %}
+{% test no_empty_strings(model) %}
     {% for col in adapter.get_columns_in_relation(model) %}
         {% if col.is_string() %}
-            {{ col.name }} IS NOT NULL AND {{ col.name }} <> '' AND
+            {{ col.name }} is null or {{ col.name }} <> '' AND
         {% endif %}
     {% endfor %}
-    TRUE
-{% endmacro %}
+    FALSE
+{% endtest %}
