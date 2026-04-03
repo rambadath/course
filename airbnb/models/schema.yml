@@ -4,9 +4,7 @@ models:
   - name: dim_list_cleansed    
     description: Cleansed table which contains Airbnb listings.
     tests:
-      - no_empty_strings:
-          arguments:
-            to: ref('dim_list_cleansed')
+      - no_empty_strings
     #data_tests:
       #- minimum_row_count:
        #   arguments:
