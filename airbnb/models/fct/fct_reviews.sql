@@ -5,7 +5,11 @@
     )
 }}
 WITH src_reviews AS (
-  SELECT * FROM {{ ref('src_reviews') }}
+  SELECT LISTING_ID,
+	REVIEW_DATE,
+	REVIEWER_NAME,
+	REVIEW_TEXT,
+	REVIEW_SENTIMENT FROM {{ ref('src_reviews') }}
 )
 SELECT
   {{ dbt_utils.generate_surrogate_key(['listing_id', 'review_date', 'reviewer_name', 'review_text']) }}
